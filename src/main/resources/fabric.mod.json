@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "enchanthighlighter",
+  "version": "1.6-alpha",
+  "name": "EnchantHighlighter",
+  "description": "Hebt Items in Kisten und Inventaren farbig hervor basierend auf Verzauberungsseltenheit (Standard, Selten, Episch, Legendär, Speziell, Mythisch, Besonders). Inkl. Suchfunktion und Max-Verzauberungsstern.",
+  "authors": ["AbartigerAlex"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/enchanthighlighter/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.yyuh.animesuchtutils.client.AnimesuchtUtilsClient"
+    ],
+    "main": [
+      "dev.yyuh.animesuchtutils.Animesuchtutils"
+    ]
+  },
+  "mixins": [
+    "animesuchtutils.mixins.json",
+    {
+      "config": "animesuchtutils.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~1.21.10"
+  }
+}
